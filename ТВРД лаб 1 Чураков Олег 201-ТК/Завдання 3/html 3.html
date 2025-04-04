@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиця</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 80%;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 15px;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #f4f4f9;
+        }
+
+        td {
+            background-color: #e8e8f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Таблиця</h1>
+    <table>
+        <tr>
+            <td rowspan="2">1</td>
+            <td rowspan="1">2</td>
+            <td rowspan="1">3</td>
+            <td rowspan="2">4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td colspan="4">7</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+			<td>11</td>
+        </tr>
+    </table>
+</body>
+</html>

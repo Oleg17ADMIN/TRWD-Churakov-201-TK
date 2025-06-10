@@ -1,0 +1,189 @@
+/* Фон і типографіка */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #2a2a2a, #000);
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+/* Загальний контейнер */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.navbar, .header {
+  background: linear-gradient(90deg, #333, #111);
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Основний контент */
+main {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
+}
+
+/* Підсвічування заголовка "ГОЛОВНА СТОРІНКА" */
+h1 {
+  color: #ffcc00;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0 0 20px rgba(255, 0, 150, 0.8); /* Фіолетове світіння */
+  border-bottom: 4px solid #ff00ff; /* Фіолетова обводка */
+  padding-bottom: 10px;
+}
+
+/* Навігаційні елементи */
+.navbar a {
+  color: #ffcc00 !important;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.navbar a:hover {
+  color: #ffaa00 !important;
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.8); /* Червоне світіння при наведенні */
+}
+
+/* Кнопки */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #ffcc00, #ff6600);
+  color: #000;
+  border: 2px solid transparent;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #ffaa00, #ff4400);
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #ffcc00;
+  color: #ffcc00;
+}
+
+.btn-outline:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+/* Форма */
+form.p-4 {
+  background-color: rgba(26, 26, 26, 0.9);
+  border: 1px solid #555;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Основний блок зі списком користувачів */
+.user-list {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
+}
+
+/* Заголовок "Список користувачів" */
+h1 {
+  color: #ff0033; /* Червоний */
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0 0 15px rgba(255, 0, 150, 0.8); /* Фіолетове світіння */
+  border-bottom: 4px solid #ff0033; /* Червона лінія */
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+h1 {
+  color: #ff0033 !important; 
+  text-shadow: 0 0 15px rgba(255, 0, 150, 0.8) !important;
+}
+
+/* Список користувачів */
+.user-item {
+  background: linear-gradient(90deg, #222, #333);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+.user-item:hover {
+  background: linear-gradient(90deg, #ff4400, #ff7700); /* Яскравий ефект */
+  color: #000;
+}
+
+/* Кнопки "Додати користувача" */
+.btn-add-user {
+  background: linear-gradient(90deg, #00ccff, #0066ff);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-add-user:hover {
+  background: linear-gradient(90deg, #0099ff, #0033cc);
+  transform: translateY(-3px);
+}
+
+/* Форма додавання користувача */
+.user-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
+}
+
+.user-form input {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #555;
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.user-form input:focus {
+  border: 2px solid #ff7700;
+  outline: none;
+}
+
+/* Адаптація для мобільних */
+@media (max-width: 768px) {
+  .user-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .btn-add-user {
+    width: 100%;
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    {{> header}}
+    
+    <main class="container mt-4">
+      <div class="hero">
+        <h1>{{title}}</h1>
+      </div>
+      <form action="/tests" method="POST" id="newTestForm" class="p-4 bg-dark border rounded">
+        <div class="mb-3">
+          <label for="testTitle" class="form-label">Назва тесту:</label>
+          <input type="text" id="testTitle" name="title" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="testDescription" class="form-label">Опис тесту:</label>
+          <textarea id="testDescription" name="description" class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="timeLimit" class="form-label">Ліміт часу (хв):</label>
+          <input type="number" id="timeLimit" name="timeLimit" class="form-control" value="0">
+        </div>
+        <!-- Блок для динамічного додавання питань -->
+        <div id="questionContainer">
+          <h4>Питання</h4>
+          <div class="question-block mb-3">
+            <div class="mb-3">
+              <label class="form-label">Тип питання:</label>
+              <select name="questions[0][type]" class="form-select" required>
+                <option value="multiple-choice">Множинний вибір</option>
+                <option value="text">Текстова відповідь</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Текст питання:</label>
+              <input type="text" name="questions[0][questionText]" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Варіанти відповіді (розділяти кому):</label>
+              <input type="text" name="questions[0][options]" class="form-control" placeholder="Лише для множинного вибору">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Правильна відповідь:</label>
+              <input type="text" name="questions[0][correctAnswer]" class="form-control" required>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="addQuestionBtn" class="btn btn-outline mt-3">Додати питання</button>
+        <button type="submit" class="btn btn-primary mt-3">Створити тест</button>
+      </form>
+	  <form action="/questions/create" method="POST" enctype="multipart/form-data">
+  <label>Текст питання:</label>
+  <textarea name="text"></textarea>
+
+  <label>Зображення (опційно):</label>
+  <input type="file" name="imageFile" accept="image/*">
+
+  <!-- Інші поля для відповідей -->
+  <button type="submit">Зберегти</button>
+</form>
+
+    </main>
+    
+    {{> footer}}
+    
+    <script src="/js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

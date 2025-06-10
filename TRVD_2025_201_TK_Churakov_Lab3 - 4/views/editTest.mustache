@@ -1,0 +1,21 @@
+{{> header }}
+<div class="hero text-center">
+  <h1>{{title}}</h1>
+</div>
+<form action="/tests/{{test._id}}?_method=PUT" method="POST">
+  <div class="mb-3">
+    <label class="form-label" for="title">Назва тесту:</label>
+    <input type="text" name="title" id="title" class="form-control" value="{{test.title}}" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="description">Опис тесту:</label>
+    <textarea name="description" id="description" class="form-control">{{test.description}}</textarea>
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="timeLimit">Ліміт часу (хв):</label>
+    <input type="number" name="timeLimit" id="timeLimit" class="form-control" value="{{test.timeLimit}}">
+  </div>
+  <!-- Якщо потрібне редагування питань, додайте відповідний розділ тут -->
+  <button type="submit" class="btn btn-primary">Оновити тест</button>
+</form>
+{{> footer }}

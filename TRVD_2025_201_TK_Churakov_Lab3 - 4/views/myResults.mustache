@@ -1,0 +1,21 @@
+{{> header }}
+
+<main class="container mt-4">
+  <h1 class="mb-4">Мої результати</h1>
+
+  {{#results}}
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Тест: {{testId.title}}</h5>
+        <p class="card-text">Бал: {{score}}</p>
+        <p class="card-text"><small class="text-muted">Дата: {{date}}</small></p>
+      </div>
+    </div>
+  {{/results}}
+
+  {{^results}}
+    <p class="alert alert-info text-center">Ви ще не проходили жодного тесту.</p>
+  {{/results}}
+</main>
+
+{{> footer }}

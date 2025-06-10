@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="/">Тестова платформа</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Головна</a></li>
+        <li class="nav-item"><a class="nav-link" href="/tests">Тести</a></li>
+        <li class="nav-item"><a class="nav-link" href="/users">Користувачі</a></li>
+      </ul>
+      <ul class="navbar-nav">
+        {{#user}}
+          <li class="nav-item"><span class="nav-link">Привіт, {{user.name}}</span></li>
+          <li class="nav-item"><a class="nav-link" href="/logout">Вийти</a></li>
+        {{/user}}
+        {{^user}}
+          <li class="nav-item"><a class="nav-link" href="/login">Увійти</a></li>
+          <li class="nav-item"><a class="nav-link" href="/register">Реєстрація</a></li>
+        {{/user}}
+      </ul>
+    </div>
+  </div>
+</nav>

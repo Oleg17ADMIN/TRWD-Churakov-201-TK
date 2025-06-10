@@ -1,0 +1,13 @@
+{{> header }}
+<div class="container mt-4">
+  <h1 class="text-center mb-4">Реєстрація</h1>
+  <form action="/register" method="POST" class="p-4 bg-light border rounded">
+    <input type="text" name="name" placeholder="Ім'я" class="form-control mb-2" required>
+    <input type="email" name="email" placeholder="Email" class="form-control mb-2" required>
+    <input type="password" name="password" placeholder="Пароль" class="form-control mb-2" required>
+    <input type="number" name="age" placeholder="Вік" class="form-control mb-2">
+    <button type="submit" class="btn btn-primary w-100">Зареєструватись</button>
+  </form>
+  <p class="text-center mt-3">Вже маєш акаунт? <a href="/login">Увійди</a></p>
+</div>
+{{> footer }}

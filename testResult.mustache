@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Результат тесту: {{test.title}}</h1>
+      <p>Набрано балів: {{score}}</p>
+      {{#timeTaken}}
+      <p>Час проходження: {{timeTaken}} секунд</p>
+      {{/timeTaken}}
+      <a href="/tests" class="btn btn-primary">Повернутися до списку тестів</a>
+    </div>
+  </body>
+</html>
